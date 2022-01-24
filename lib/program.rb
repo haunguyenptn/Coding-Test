@@ -22,7 +22,7 @@ module Program
     receipt = TaxCalculator.new(order, tax_policies).receipt
     output = PlainTextOutput.new(receipt).output
     puts output
-  rescue RuntimeException => e
+  rescue RuntimeError  => e
     puts "Error: #{e.message}"
   end
 end
